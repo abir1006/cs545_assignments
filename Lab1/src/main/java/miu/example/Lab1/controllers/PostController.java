@@ -29,7 +29,7 @@ public class PostController {
 
     @ResponseStatus(HttpStatus.CREATED)
     @PostMapping
-    public Post save(@RequestBody Post post) {
+    public PostDto save(@RequestBody PostDto post) {
         return postService.save(post);
     }
 

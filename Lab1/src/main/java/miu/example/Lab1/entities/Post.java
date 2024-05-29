@@ -8,6 +8,7 @@ import lombok.Setter;
 @Data
 @Getter
 @Setter
+@NoArgsConstructor
 public class Post {
     int id;
     String title;

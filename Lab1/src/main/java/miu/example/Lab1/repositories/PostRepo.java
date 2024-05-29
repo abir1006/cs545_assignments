@@ -9,5 +9,5 @@ public interface PostRepo {
     public Post save(Post post);
     public List<Post> delete(int id);
     public Post findById(int id);
-    public void update(int id, Post post);
+    //public void update(int id, Post post);
 }

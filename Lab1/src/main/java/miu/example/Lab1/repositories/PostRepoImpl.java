@@ -70,9 +70,4 @@ public class PostRepoImpl implements PostRepo {
                 .findFirst()
                 .orElse(null);
     }
-
-    @Override
-    public void update(int id, Post post) {
-
-    }
 }
