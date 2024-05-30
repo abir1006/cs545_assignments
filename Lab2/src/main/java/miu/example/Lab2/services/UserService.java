@@ -13,6 +13,6 @@ public interface UserService {
     public UserDto findById(Long id);
     public UserDto save(UserDto user);
     // public PostDto update(PostDto post);
-    public void delete(User user);
+    public void deleteById(Long id);
     public List<PostDto> findPostByUserId(Long userId);
 }

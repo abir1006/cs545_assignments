@@ -39,8 +39,9 @@ public class UserController {
         return userService.save(user);
     }
 
-    @DeleteMapping
-    public void delete(@RequestBody User user) {
-        userService.delete(user);
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    @DeleteMapping("/{id}")
+    public void delete(@PathVariable Long id) {
+        userService.deleteById(id);
     }
 }

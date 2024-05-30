@@ -1,5 +1,7 @@
 package miu.example.Lab2.services;
 
+import jakarta.persistence.EntityManager;
+import jakarta.transaction.Transactional;
 import miu.example.Lab2.entities.User;
 import miu.example.Lab2.entities.dtos.response.PostDto;
 import miu.example.Lab2.entities.dtos.response.UserDto;
@@ -12,6 +14,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @Service
+@Transactional
 public class UserServiceImpl implements UserService {
 
     @Autowired
@@ -19,6 +22,9 @@ public class UserServiceImpl implements UserService {
 
     @Autowired
     private ModelMapper modelMapper;
+
+    @Autowired
+    private EntityManager entityManager;
 
     @Override
     public List<UserDto> findAll() {
@@ -41,8 +47,8 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public void delete(User user) {
-        userRepo.delete(user);
+    public void deleteById(Long id) {
+        userRepo.deleteById(id);
     }
 
     @Override

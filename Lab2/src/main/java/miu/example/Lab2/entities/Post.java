@@ -17,7 +17,7 @@ public class Post {
     String content;
     String author;
 
-    @ManyToOne(cascade = CascadeType.PERSIST)
+    @ManyToOne
     @JoinColumn(name = "user_id")
     private User user;
 }
