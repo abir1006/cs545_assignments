@@ -21,6 +21,11 @@ public class PostController {
         return postService.findAll();
     }
 
+    @GetMapping("/filter")
+    public List<PostDto> findByTitle(@RequestParam String title) {
+        return postService.findByTitle(title);
+    }
+
     @ResponseStatus(HttpStatus.OK)
     @GetMapping("/{id}")
     public PostDto findById(@PathVariable Long id) {
