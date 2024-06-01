@@ -9,10 +9,9 @@ import java.util.List;
 @Setter
 @Getter
 public class PostDto {
-    private int id;
+    private Long id;
     private String title;
     private String content;
     private String author;
-
     private List<CommentDto> comments;
  }

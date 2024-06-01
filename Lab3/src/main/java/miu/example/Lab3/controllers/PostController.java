@@ -26,6 +26,11 @@ public class PostController {
         return postService.findByTitle(title);
     }
 
+    @PutMapping("/{id}")
+    public PostDto update(@RequestBody Post post, @PathVariable Long id) {
+        return postService.update(id, post);
+    }
+
     @ResponseStatus(HttpStatus.OK)
     @GetMapping("/{id}")
     public PostDto findById(@PathVariable Long id) {

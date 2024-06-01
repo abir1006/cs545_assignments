@@ -10,6 +10,6 @@ public interface PostService {
     public List<PostDto> findByTitle(String title);
     public PostDto findById(Long id);
     public PostDto save(PostDto post);
-    // public PostDto update(PostDto post);
+    public PostDto update(Long id, Post post);
     public void delete(Post post);
 }
