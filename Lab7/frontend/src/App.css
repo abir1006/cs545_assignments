@@ -1,0 +1,31 @@
+.single-post {
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+
+.error-text {
+    color: red;
+}
+
+.fa-trash,
+.fa-trash-o {
+    color: red;
+    cursor: pointer;
+}
+
+.comments-block {
+    margin-top: 15px;
+    margin-left: 50px;
+    border: 1px solid #f1f1f1;
+}
+
+ul {
+    list-style: none;
+}
+
+.comments-block ul li {
+    padding: 5px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    border: 1px solid #f1f1f1;
+}
